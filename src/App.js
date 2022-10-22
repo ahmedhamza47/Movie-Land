@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Search from "./components/Search";
+import styled from "styled-components";
+import { BrowserRouter } from "react-router-dom";
+import Pages from "./pages/Pages";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <Title>Movie Land</Title>
+        <Search />
+        <Pages />
+      </BrowserRouter>
     </div>
   );
 }
-
+const Title = styled.div`
+  margin-top: 2rem;
+  font-weight: bold;
+  text-align: center;
+`;
 export default App;
