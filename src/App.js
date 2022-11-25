@@ -1,21 +1,18 @@
-import Search from "./components/Search";
 import styled from "styled-components";
 import { BrowserRouter } from "react-router-dom";
 import Pages from "./pages/Pages";
+import Navbar from "./components/Navbar";
 function App() {
   return (
-    <div>
+    <Body>
       <BrowserRouter>
-        <Title>Movie Land</Title>
-        <Search />
+        <Navbar />
+
         <Pages />
       </BrowserRouter>
-    </div>
+    </Body>
   );
 }
-const Title = styled.div`
-  margin-top: 2rem;
-  font-weight: bold;
-  text-align: center;
-`;
+const Body = styled.div``;
+
 export default App;
